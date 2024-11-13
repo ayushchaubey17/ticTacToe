@@ -182,6 +182,43 @@ A simple DTO (Data Transfer Object) to encapsulate a player's input (row and col
 To create the actual UML diagram, you can use tools like Lucidchart, draw.io, or UMLet. Here’s a textual representation of how the relationships might look:
 
 
+To create the actual UML diagram, you can use tools like Lucidchart, draw.io, or UMLet. Here’s a textual representation of how the relationships might look:
+
+```scss
++----------------+        +----------------+        +------------------+
+|    Main        |<>------| ModelScreen    |<>------| ModelViewScreen  |
++----------------+        +----------------+        +------------------+
+| - None         |        | - grid         |        | - viewScreen     |
+|                |        | - winner       |        | - modelScreen    |
+| + main()       |        | - winnerNo     |        | + startTheApp()  |
++----------------+        | - modelView    |        | + takeInput()    |
+                         | + startTheGame()|        | + giveMessage()  |
+                         | + checkForWin() |        | + printTheGrid() |
+                         | + updateGrid()  |        | + printForRep()  |
+                         +----------------+        +------------------+
+                                                     ^
+                                                     |
+                                               +-------------+
+                                               | ViewScreen  |
+                                               +-------------+
+                                               | - scanner   |
+                                               +-------------+
+                                               | + printGrid()|
+                                               | + showRules()|
+                                               | + takeInput()|
+                                               +-------------+
+                                                     ^
+                                                     |
+                                               +------------+
+                                               |  Input     |
+                                               +------------+
+                                               | - row      |
+                                               | - column   |
+                                               +------------+
+                                               | + getRow() |
+                                               | + getColumn()|
+                                               +------------+
+```
 
 
 
