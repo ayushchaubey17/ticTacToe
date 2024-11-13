@@ -10,7 +10,7 @@ A simple console-based Tic Tac Toe game in Java using the MVVM (Model-View-ViewM
 - [Gameplay](#gameplay)
 - [Example Output](#example-output)
 - [Code Highlights](#code-highlights)
-- [License](#license)
+
 
 ## Project Structure
 
